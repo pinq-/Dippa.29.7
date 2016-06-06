@@ -1,0 +1,459 @@
+%Karli von Kund
+
+\documentclass{LUT_pohja}[2016/03/09 LUT Dippa Pohja]
+
+
+%Muuta nämä omiksi tiedoiksi
+\school{Lappeenrannan teknillinen yliopisto}{Lappeenranta University of Technology}
+\facultyen{LUT School of Energy Systems}
+\Department{LUT Kone}{LUT Mechanical Engineering}
+\ThesisTitle{Diplomityön aihe Suomeksi}{Master of Science Thesis title}
+\Tarkastajat{Profesori N.N}{TkT N.N}
+\Examiners{Professor Name Here}{Second Name Here}
+\Doctype{Diplomityö}{Master's thesis}
+\Keywords{ulkoasuohje, muotoseikat, LUT virallinen opinnäytetyöohje, overleaf}{Master Thesis, Template, Online, Overleaf}
+\ThesisDate{2016}{06.06}
+\author{Teemu Teekkari}
+
+\begin{document}
+\sloppy
+\makecover
+% * <karli.kund@iki.fi> 2016-03-17T07:56:19.524Z:
+%
+% ^.
+\newpage
+\newgeometry{tmargin=30mm,bmargin=20mm,lmargin=30mm,rmargin=20mm}
+
+\begin{tiivis}%
+Rantasen \citeyearpar[s. 5]{Rantanen14} mukaan ”Tiivistelmä on suppea (yksi A4), objektiivinen, itsenäinen 
+esitys  opinnäytteestä.  Sen  tulee  olla  ymmärrettävissä  sellaisenaan  ilman 
+alkuperäisdokumenttia. Siinä selvitetään työn Sisältö: työn tavoite, tutkimusmetodologiat 
+ja tutkimusmenetelmät, tulokset ja  johtopäätökset. Hyvässä tiivistelmässä lauseet  ovat 
+täydellisiä, lyhyitä ja ytimekkäitä. Tekijän mielipiteet eivät näy, vaan tämä kuvaa työtään 
+kuin ulkopuolinen raportoija. Tiivistelmässä ei viitata alkuperäistekstiin.”  
+
+Lisäksi \citet[s. 6]{Rantanen14} toteaa: ”Tiivistelmään ei pidä sisällyttää luottamuksellisia 
+tietoja, vaan se on aina laadittava julkiseksi. Tiivistelmä laaditaan suomeksi ja englanniksi. 
+Sekä suomen- että englanninkielinen tiivistelmä liitetään opinnäytteeseen.”  
+
+Lisäksi tulee huomioida, että tiivistelmän rivinväli on 1 ja tiivistelmän tulee mahtua 
+yhdelle sivulle. Tiivistelmä on itsenäinen esitys kandidaatintyöstä, joten tiivistelmä tulee 
+olla ymmärrettävissä sellaisenaan. Työtä kuvataan tiivistelmässä kuin ulkopuolinen tekijä 
+olisi tiivistelmän laatinut, omat  mielipiteet eivät saa tiivistelmässä näkyä. Tiivistelmään 
+tulee sisällyttää työn keskeisimmät tulokset. \citep{Lut14}
+
+\end{tiivis}
+
+
+\begin{Abstract}
+According to \citet[s. 5]{Rantanen10}: ”The abstract is a concise (one A4 sheet), objective, 
+independent summary of the Master’s thesis. It should be intelligible as such, without the 
+original document. It explains the contents of the thesis: the objective, methodologies, 
+results and conclusions. A good abstract is written in complete and concise sentences. The 
+author does not express his or her opinions, but describes the thesis as would an outside 
+reporter. No direct references are made to the original text. The abstract is a public 
+document, and therefore all confidential information must be excluded from it.\par
+
+Also it should be notice that the line spacing in abstract is 1. The abstract is also an 
+independent summary of the thesis and it should fit in one A4-page. Author’s own 
+opinions is not shown in the abstract.\citep{Lut14}
+
+\end{Abstract}
+
+\begin{preface}
+
+Tähän tulee alkusanat, mikäli ne haluaa työhön liittää. Yleensä alkusanoissa kiitetään työn 
+rahoittajaa  ja  työn tarkastajia.  Monesti kiitossanoissa  näkee  myös  kiitoksen 
+opiskelukavereille ja perheelle. Sana on vapaa eli kirjoita sitä miltä tuntuu! Älä kuitenkaan 
+loukkauksia tai solvauksia. 
+
+\end{preface}
+
+\renewcommand\refname{LÄHTEET}
+\renewcommand\contentsname{ }
+
+\pagestyle{Mainstyle}
+\newpage
+\begin{luettelo}
+\MakeUppercase{Tiivistelmä}\par
+\MakeUppercase{Abstract}\par
+\MakeUppercase{Alkusanat}\par
+\MakeUppercase{Sisällysluettelo}\par
+\MakeUppercase{Symboliluettelo}\par
+\end{luettelo}
+\tableofcontents
+\newpage
+\section*{\MakeUppercase{Symboli- ja lyhenneluettelo}}
+SYMBOLIT\par
+%http://web.ift.uib.no/Teori/KURS/WRK/TeX/symALL.html symbolit
+\itab{$\alpha$} \tab{Lastuamissyvyys [mm]}\\
+\itab{$f$} \tab{Syöttö [mm/r]}\\
+\itab{$\kappa_{r}$} \tab{Poran leikkauskulma [$^{\circ}$]}\\
+\itab{$k_{c}$} \tab{Ominaislastuamisvoima [N/mm$^2$]}\\
+\itab{$R_{a}$} \tab{Aritmeettinen pinnankarheuden keskiarvo [$\mu$m]}\\
+\itab{$v$} \tab{Lastuamisnopeus [m/min]}
+
+Symboli-  ja  lyhenneluetteloon  kirjoitetaan  termit,  jotka  eivät  ole  lukijalle 
+itsestäänselvyyksiä. Se mikä on itsestäänselvyys, on kiinni työn tekijästä. Kuitenkin 
+ihminen, joka tulee lukemaan työtä, on mitä ilmeisemmin aihealueesta jo vähän tietävä, 
+tämä on hyvä pitää mielessä, kun symboli/lyhenneluetteloa laatii.\par
+Tässä yllä olevassa esimerkissä on vain symboleja, siksi otsikko symboliluettelo. Jos 
+luettelossa on vain lyhenteitä, on nimi tällöin lyhenneluettelo. Symbolit  ja lyhenteet 
+luetellaan selityksineen aakkosjärjestyksessä ryhmittäin: esimerkiksi ensiksi roomalaiset 
+aakkoset, sitten kreikkalaiset aakkoset ja lopuksi lyhenteet. Yleensä yksiköiden tulisi olla 
+SI-yksiköitä, poikkeukset näistä olisi hyvä mainita. Esim. syötön kohdalla yksikkö mm/r 
+on yleisesti käytössä (ei m/r). Lastuamisnopeuden kohdalla yksikkö m/min on yleisesti 
+käytössä (ei m/s).
+
+\newpage
+\section{JOHDANTO}
+Tämän ohje on ulkoasumalli ja tiivistetty ohje selostuksien ja opinnäytteiden laatimiseen. 
+Lähteenä tämän ohjeen laatimisessa on käytetty LUTin opinnäytetyöohjetta, yliopiston 
+kirjaston www-sivuja, sekä tieteellisen tekstin laatimisen oppaita. Näistä oppaista 
+opiskelija myös löytää lisäohjeita ja ohjeita niihin kirjoittamisen osa-alueisiin, joita ei tässä ohjeessa ole käsitelty. LUT Koneella tulee noudattaa yliopiston virallista ulkoasuohjetta. Osa lähteistä on keksittyjä esimerkkejä. \par
+
+Kieliasun laatuun panostamisen merkitys lienee kaikille itsestään selvää. Tekstin on oltava selkeää ja selostuksen on edettävä johdonmukaisesti. Ei ole hyvä asia jos lukija ei ymmärrä mitä kirjoittaja on tarkoittanut tai pahimmassa tapauksessa ymmärtää asian väärin. Tärkeää on tietenkin myös, että kirjoittaja itse ymmärtää kirjoittamansa. Lue siis ensin ajatuksella teksti, josta tulet kirjoittamaan ja kirjoittamisen jälkeen lue vielä, mitä olet kirjoittanut.\par 
+
+Miksi työn ulkoasuun ja muotoseikkoihin tulee kiinnittää huomiota? Työn ulkoasusta tulisi saada selkeä, jolloin työ olisi myös helposti luettavissa ja ennen kaikkea lukeminen olisi miellyttävää.  Työstä löytää helposti etsimänsä  ja työ  etenee  johdonmukaisesti. Lähdeviitteiden  oikein  merkitseminen  on  erittäin  tärkeää,  ei  ainoastaan tekijänoikeudellisista syistä, vaan myös koska niiden avulla työn lukija havaitsee, mikä asia on otettu mistäkin lähteestä. Lukija voi tällöin myös arvioida esimerkiksi tiedon luotettavuutta ja ajanmukaisuutta lähteiden laadun ja julkaisuvuoden perusteella. Lukijalla on lähdemerkintöjen avulla myös mahdollisuus löytää alkuperäinen lähde esimerkiksi lisätietojen etsimistä varten.\par
+
+Jokaisen opiskelijan tulisi itsenäisesti perehtyä viittaustekniikoihin ja siihen miten teknistä tekstiä kirjoitetaan \citep{Pakkanen05}. Vastuu omasta oppimisesta on jokaisella opiskelijalla itsellään. Apua ja ohjeistusta saa ja sitä tulee pyytää, kun sitä tarvitsee. Rohkaisuna vielä kirjoittajille: Kukaan ei ole seppä syntyessään ja virheitä syntyy, mutta kun kerran ulkoasuasiat opettelee, on kirjoittaminen tulevaisuudessa paljon helpompaa. \citep{Viittaaminen07}
+\newpage
+\section{TEKNISEN TIETEELLISEN TEKSTIN ULKOASU JA MUOTOSEIKAT}
+
+Seuraavassa listaus muutamista asioista, joihin kirjoittaessa kannattaa etenkin kiinnittää huomiota (listaus perustuu opinnäytetöissä yleisimmin ilmeneviin ongelmakohtiin): 
+\begin{itemize}
+\item Kirjoitusvirheet, pilkkuvirheet, yhdyssanavirheet yms.
+\item Kirjallinen ilmaisu: ymmärrätkö itse kirjoittamasi tekstin, entä kaverisi? Kun olet saanut kirjoitettua työsi, odota päivä ja tarkasta tämän jälkeen työsi uudelleen. Usein o mille kirjo itusvirheilleen tulee ”sokeaksi”. 
+\item Kuvien ja taulukoiden selkeys: toimivatko kuvat myös mustavalkoisina? Saako 
+kuvateksteistä selvää? \textit{Kiinnitä huomiota myös taulukoiden ja kuvien selittämiseen 
+ja avaamiseen.} Tulkitseeko tutkimuksesi lukija kuvia ja taulukoita samoin kuin sinä 
+tulkitset?  Käytä  mahdollisimman  tarkkoja  analyysejä  virhetulkintojen 
+välttämiseksi.
+\item Oikeat  tekniset  termit: apua esimerkiksi  lastuavan työstötekniikan termien 
+suomentamiseen  saa Veijo  Kauppisen \citeyearpar{Kauppinen90} teoksesta ”Lastuamistekninen sanasto”. Myös standardit ovat hyviä oikean termistön varmistamiseen. Kannattaa myös kysyä varmistus sanoihin työn ohjaajalta, jos ei ole varma siitä mitä termiä tulisi käyttää.
+\item Onko tekstisi kirjoitettu asiatyylillä? Käytä tekstissäsi passiivia, älä yksikön tai monikon 1. persoonaa. 
+\item Vältä epämääräisiä ilmaisuja, kuten melko pieni yms. ja myöskään ehdottomat 
+ilmaisut eivät ole suotavia (esim. kaikki tehtaat ovat suuria).
+\item Älä sekoita aikamuotoja tai kieliä (huomioi tässä myös kuvissa ja taulukoissa 
+olevat tekstit).
+\end{itemize}
+%\vspace{1em}
+Seuraavissa  alaluvuissa  käsitellään  tarkemmin  teknisen  tieteellisen  raportin 
+ulkoasuvaatimuksia ja muotoseikkoja.
+\subsection{Rivinvälit, fontti, marginaalit, tasaus, sivunumerointi ja otsikot}
+Opinnäytetyöohjeiden mukaan rivinväli on 1,5.  Fontin käyttöön on kaksi eri 
+mahdollisuutta: Times New Roman tai Arial (tämä ohje on kirjoitettu Times New 
+Romanilla). Fonttikokona koko tekstissä käytetään: Times 12pt tai Arial 11pt.  Jokaisen tekstikappaleen jälkeen tulee yksi (1) tyhjä rivinväli. Yksi (1) tyhjä rivinväli tulee myös kuvien ja taulukoiden jälkeen.
+\newpage
+Marginaalit tulee asettaa seuraavasti 
+\begin{itemize}
+\item Ylä- ja vasen marginaali 35 mm
+\item Ala- ja oikea marginaali 20 mm
+\end{itemize}
+%\vspace{1em}
+Nimiölehti on selostuksen sivu numero 1, mutta sivunumerointi laitetaan näkyviin vasta 
+sisällysluettelosivusta alkaen. Sivunumerot tulisi sijoittaa sivun ylälaitaan joko keskelle tai oikeaan reunaan. Sivunumerointi loppuu lähdeluettelon viimeiselle sivulle. Tasaus tulee molempiin reunoihin. Kannattaa olla tarkkana, että teksti ”sulautuu” jouhevasti tasaukseen.Tarpeen vaatiessa käytä tavutusta, mutta tavutus kannattaa tarkistaa, joskus Word ei osaa tavuttaa sanoja oikein.\par
+
+Jos sijoitat 1. tason otsikot/pääotsikot sivujen alkuun ja jos sijoitat tekstiin isoja kuvia tai taulukoita huomaa, että sivujen alalaitaan ei saisi jäädä enempää tyhjää tilaa kuin n. 20 \% sivusta.\citep[s. 16.]{Kauppinen01a} 
+
+Otsikkonumerointi aloitetaan johdannosta, josta numerointi jatkuu juoksevasti viimeiseen kappaleeseen  asti. \textit{Pistettä ei merkitä viimeisen eikä ainoan otsikkonumeron perään.} Kirjoituksen nimi ja pääotsikot (1. tason otsikot) ovat suuraakkosin ja alaotsikot pienaakkosin. \citep[s. 34.]{Varis97} Lisäksi tulee huomioida, että pääotsikot tulevat lihavoituna (”boldaus”). Tekstin jälkeen tulee lähdeluettelo, jota ei numeroida. Pääotsikon jälkeen tulee kaksi tyhjää riviä (pääotsikot alkavat omalta sivultaan). Alaotsikoita ennen tulee yksi tyhjä rivi, alaotsikon jälkeen ei tule tyhjiä rivinvälejä.Kappalejako määräytyy työn mukaan, asiayhteys tulee jaotella loogisesti. Työn teossa kannattaa huomioida IMRAD-rakenne, jotta työ etenisi loogisesti. Otsikoissa voi käyttää huutomerkkiä tai kysymysmerkkiä, vaikka se asiatekstissä onkin harvinaisempaa. Sen sijaan pistettä ei merkitä otsikon perään, vaikka otsikko olisi virkkeen muotoinen. (Nykänen, 2002, s. 62–63.) (LÄHDE PUUTTUU)\par
+
+Huomio myös, että kahta otsikkoa ei voi tulla peräkkäin: esimerkiksi ensin on 1. tason 
+otsikko ja heti tämän jälkeen 2. tason otsikko. Näiden otsikoiden väliin on tultava tekstiä, 10 esimerkiksi selventämään sitä mitä seuraavaksi tulla käsittelemään. Työssä ei myöskään saa kahteen kertaan esiintyä samaa otsikkonimeä.\par
+
+Otsikoiden tulisi kuvata  hyvin kappaleen  sisältöä  ja  otsikoissa tulisi  välttää 
+kysymysmuotoa. Työn otsikoiden tulisi kuvata mahdollisimman hyvin kappaleen sisältöä. 
+Pelkkä Teoriaa -otsikko ei esimerkiksi kerro lukijalle, mitä asioita otsikon alla käsitellään. Työssä ei tulisi käyttää samaa otsikkoa (eli otsikon nimeä) kuin kerran. 
+
+\subsection{Luettelojen merkitseminen tekstiin}
+\citet[s. 110]{Hirsjarvi05} ovat kirjoittaneet että ”Lukua ei mielellään päätetä luetteloon. Ainakin pari kolme virkettä olisi hyvä saada sitomaan luvun käsittely kiinteäksi.” (Edellä on suoran lainauksen esimerkki.) Yhden tai vain muutaman virkkeen kappaleita on vältettävä. Huomioi myös, että pelkän luetelman esittäminen ei ole riittävä kappaleeksi.\par
+
+Luetelmat voidaan esittää muutamaan eri tapaan, joista yleisimpiä on käytetty tässä 
+selostuksessa \citep[s.23]{Leino00}. (Edellä esimerkki lähdeviitteen 
+merkitsemisestä kun lähde viittaa vain yhteen lauseeseen). Seuraavassa on esitetty 
+muutama luetteloesimerkki. Jos lause jatkuu luettelon muodossa, ei ennen luetteloa yleensä ole kaksoispistettä. Esimerkiksi toisessa esimerkkiluettelossa alla lause jatkuu olla-verbin jälkeen, jolloin ei käytetä kaksoispistettä luettelon johdantolauseen jälkeen. Kolmannessa esimerkissä luettelo sisältää kokonaisia lauseita, tärkeää on huomioida tässä että lähdemerkintä tulee oikein. Teknisen tekstin laadinnassa tärkeitä seikkoja on lueteltu seuraavassa \citep[s.20]{Leino00}:
+\begin{itemize}[-]
+\item selkeä ulkoasu 
+\item johdonmukainen kappalejako
+\item oikeat tekniset termit.
+\end{itemize}
+\vspace{1em}
+Selostuksia tarkastettaessa huomioitavia seikkoja Leinon et al. \citeyearpar[s. 23]{Leino00} mukaan ovat 
+\begin{itemize}[-]
+\item ”asiasisältö
+\item tieteellisyys, uutuusarvo ja luotettavuus
+\item tekstin selkeys ja sujuvuus
+\item ulkoasu. ”
+\end{itemize}
+\vspace{1em}
+Esimerkkiluettelo, kun luettelossa on kokonaisia lauseita\citep[s. 23]{Leino00}:
+\begin{enumerate}[1),noitemsep, nolistsep, topsep=-1em]
+\item Tämä on luettelon lause 1.
+\item Tämä on luettelon lause 2.
+\item Tämä on luettelon lause 3.
+\end{enumerate}
+\vspace{1em}
+Edellä mainittu luettelo voidaan esittää myös toisella tavalla, mikä on kuvattu alla (eli 
+lähde tulee luettelon loppuun, samoin kuin se tulisi kappaleen loppuun). Esimerkkiluettelo, kun luettelossa on kokonaisia lauseita:
+\begin{enumerate}[1),noitemsep, nolistsep, topsep=-1em]
+\item Tämä on luettelon lause 1.
+\item Tämä on luettelon lause 2.
+\item Tämä on luettelon lause 3.
+\end{enumerate}
+\citep[s. 23.]{Leino00}
+
+Luetteloissa voidaan käyttää tarpeen mukaan numeroita, ranskalaisia viivoja tai muita 
+luettelomerkkejä.  Numeroita  tai kirjaimia  luettelossa käytetään esimerkiksi,  kun 
+myöhemmin on tarve viitata luettelon johonkin kohtaan. Numeron tai kirjaimen jälkeen 
+tulee kaarisulku (kuten yllä). Luettelomerkkien tulisi mielellään olla samanlaisia läpi työn. (\citeauthor{Leino00}, \citeyear{Leino00}, s. 23; \citeauthor{Kauppinen01a}, \citeyear{Kauppinen01a}, s. 14.)
+\subsection{Taulukoiden ja kuvien esittäminen}
+Taulukoilla ja kuvilla voidaan selventää tekstin sisältöä. Taulukkoa voi käyttää myös 
+vertailujen tekemiseen. Taulukkoteksti kursivoidaan ja se on aina taulukon yläpuolella alkaen vasemmasta reunasta. Taulukkoa ei keskitetä. Taulukoihin ja kuviin viitataan tekstissä, ennen niiden esiintymistä. \citep[s.98.]{Leino00} Suurten kuvien ja taulukoiden sijoittamista liitteisiin on aina harkittava. Taulukossa 1 on esitelty esimerkkinä tärkeimpiä lastuamisarvoja ja aikaansaatavia pinnankarheuksia sorvauksessa.
+%isot taulukot kannattaa tehdä toisessa ohjelmassa valmiiksi ja kopioida tänne. Harmaat hiukset tulevat kyllä itsestään aikanaan.
+\begin{table}[htb]
+%% Taulukon teksti
+\caption{Kaksi lastuamisarvoyhdistelmää 25CrMo4-nuorrutusteräksen sorvaukseen \citep[s. 34]{Varis97}.}
+\begin{tabular}{|l|l|l|l|}
+	\hline
+  Lastuamisnopeus, $v$ & Syöttö, $f$  & Lastuamissyvyys, $a$ & Pinnankarheus, $R_{a}$\\
+  $[$m/min$]$ & $[$m/r$]$ & $[$mm$]$ & $[\mu$m$]$\\ \hline
+  200 & 1,618 & 42 & 42\\ \hline
+\end{tabular}
+\end{table}
+\newpage
+
+\addtocounter{table}{-1}%Tämä vain koska sama taulukko jatkuu. Jos on pitkä taulkko
+						%nii käyttäkää longtable kirjastoa.
+\begin{table}[htb]
+%% Taulukon teksti
+\caption{Kaksi lastuamisarvoyhdistelmää 25CrMo4-nuorrutusteräksen sorvaukseen \citep[s. 34]{Varis97}.}
+	\label{table:Lastuamis}
+\begin{tabular}{|l|l|l|l|}
+	\hline
+  Lastuamisnopeus, $v$ & Syöttö, $f$  & Lastuamissyvyys, $a$ & Pinnankarheus, $R_{a}$\\
+  $[$m/min$]$ & $[$m/r$]$ & $[$mm$]$ & $[\mu$m$]$\\ \hline
+  180 & 3,141 & 42 & 42\\ \hline
+\end{tabular}
+\end{table}
+Huomio taulukon jatkuminen toiselle sivulle! Aina taulukkoa ei saa sijoitettua yhdelle 
+sivulle, tällöin tulee toimia kuten taulukossa \ref{table:Lastuamis} on toimittu: taulukko \ref{table:Lastuamis} on selkeästi merkattu, jotta lukija tietää taulukon jatkuvan. Lisäksi itse taulukossa on otsikkorivi (lastuamisnopeus, syöttö ja niin edelleen) kirjoitettu uudestaan lukemisen helpottamiseksi.\par
+
+Testissä, ennen kuvaa, kerrotaan kuvien sisällöstä ja sen tarjoamasta informaatiosta.
+Kuvassa \ref{fig:Sylinteri} on bussi, mikä muistuttaa siitä, että joihinkin kursseihin kuuluu teollisuusvierailu. Näillä matkoilla pääsee yleensä tutustumaan kurssin aihepiiriin liittyviinyrityksiin. Reissut ovat hyvä vastapaino harjoitustöiden parissa pakertamiselle. Selvitätekstissä mitä kuvassa on ja mitä kuvasta pitäisi havaita. Kuvat keskitetään ja kuvateksti onkuvan alla alkaen vasemmasta laidasta (kuvatekstejä ei keskitetä). Kuvatekstissä on lyhytselostus kuvasta. Kuvatekstistä pitäisi ilmetä kuvan informaatio, vaikka varsinaista tekstiäennen kuvaa (missä kuvaan viitataan) ei lukisi. Käytä tekstissä samoja merkintöjä kuinkuvissa ja muista merkitä yksiköt sekä taulukoissa että kuvissa. Muista kuvata koordinaatistot yms., joita tarvitset tekstissä. (\citeauthor{Andersson97}, \citeyear{Andersson97}, s. 135; \citeauthor{Jantunen07}, \citeyear{Jantunen07}, s. 45; \citeauthor{Leino00}, \citeyear{Leino00}, s. 90.)\\
+%Kuvia varten ei tarvitse tehdä figure koodia. Jos ongelmia syntyy, voi käydä muokkaamassa LUT_pohjasta tietoa tai tehdä manuaalisesti koko pohja. 
+%\kuva{Koko}{Tiedoston nimi}{Teksti}{viite nimi}
+\kuva{0.4}{bussi}{Linja-auto \citep[s. 100]{Kauppinen01a}.}{Sylinteri}
+
+Kuvassa \ref{fig:universal} on opiskelija, joka tekee harjoitustyötä varten kirjallisuustutkimusta. Tiedonetsintä harjoitustöihin voi olla joskus raskasta ja työn kirjoittaminen ei luonnistu kaikilta vaivatta. Opiskelijan on muistettava varata itselleen riittävästi aikaa harjoitustöiden
+tekemiseen. \citep[s. 34.]{Varis97}
+\kuva{0.4}{opiskelija}{Opiskelija tekemässä harjoitustyötä \citep[s. 90]{Leino00}.}{universal}
+% * <karli.kund@iki.fi> 2016-03-22T14:37:41.011Z:
+%
+% ^.
+
+\subsection{Yhtälöiden ja muuttujien esittäminen}
+Työssä olevat muuttujat kursivoidaan. Tekstissä on mainittava myös suureen symbolin
+nimi, esim. sähkövaraus $Q$, kun se esiintyy ensimmäisen kerran ja symbolin nimi on syytätoistaa harkinnan mukaan myöhemminkin. Kaavat numeroidaan alla olevan esimerkin
+mukaisesti. Aksiaalivoima eli syöttövoima $F$ voidaan laskea seuraavasti \citep[s. 91]{Leino00}:
+\begin{equation}\label{eq:lastu}
+F = 0,65\times (\mathrm{afk}_{c} sin \kappa_{r})
+\end{equation}
+Yhtälössä \ref{eq:lastu} \textit{a} on lastuamissyvyys, \textit{f} on syöttö, \textit{$\kappa_{r}$} on ominaislastuamisvoima ja r on poran leikkauskulma \citep[s. 91]{Leino00}. HUOM! Yhtälöön ei saa viitata ennen sen esiintymistä, vasta ensimmäisen esiintymisen jälkeen. Yhtälön numerointi tapahtuu juoksevasti tai kappaleittain.
+
+\subsection{Liitteiden merkitseminen}
+Liitteisiin laitetaan tietoa, mitä ei jatkuvasti tarvita, mutta joka koetaan tarpeelliseksi työn kannalta. Liitteisiin sijoitetaan myös hankalan kokoiset ja muotoiset kuvat ja taulukot.Tyypillisiä liitteitä ovat koneenpiirustukset ja kartta-aineistot. Liitteet numeroidaan Liite I, Liite II, Liite III jne. Liitesivuja ei numeroida tekstisivujen jatkoksi. Jos työn tekijä haluaa,liitteet ja niiden otsikot voidaan esittää sisällysluettelon lopussa. Huomio, että myös jokaisella liitteellä tulee olla oma otsikko.\par
+
+Jos liite on monisivuinen, jatkosivut voidaan merkitä kahdella eri tavalla:
+\begin{enumerate}[1),noitemsep, nolistsep, topsep=-1em]
+\item Liite I, 1\\
+Liite I, 2 jne. 
+\item Liite 1. Otsikko
+\begin{itemize}
+\item liitesivun alareunaan kirjo itetaan: (jatkuu) 
+\item ja jatkosivun oikeaan ylälaitaan kirjoitetaan: (liite 1 jatkoa).
+\end{itemize}
+\end{enumerate}
+\subsubsection{Testi kolmas otsikko}
+\paragraph{Neljäs otsikko}%paragraphilla saadaan neljäs alaotsikko
+testi
+
+\newpage
+\section{LÄHTEIDEN MERKITSEMINEN}
+Lähteet merkitään ensisijaisesti muun muassa tekijänoikeudellisista syistä: plagiointi on tieteellinen varkaus. Se on toisen  henkilön  ideoiden,  tietojen,  tutkimustulosten tai sananmuodon käyttöä ilman alkuperäisen lähteen asianmukaista ilmoittamista. \cite[s. 110-111.]{Hirsjarvi05}\par
+
+Viittauksessa ja lähdeluettelossa suositellaan käytettäväksi yhtä useasta Harvardin 
+järjestelmästä. Lähdeluettelo kirjoitetaan tällöin aakkosjärjestyksessä tekijän sukunimen (tai jos ei ole tiedossa, niin artikkelin nimen) mukaan tämän malliselostuksen esimerkkien mukaisest i. Huomio i että jos julkaisusta ei o le ilmoitettu henkilötekijää tai vastuuyhteisöä, 
+viitteeseen  merkintään  ensimmäiseksi  teoksen  nimi.  Lähdeviittaukset  merkitään 
+kappaleiden loppuun tai ennen kappaleen loppua jos lähde vaihtuu toiseksi. Jos lähde 
+vaihtuu esimerkiksi kesken kappaleen, on lähde merkittävä kappaleen sisään heti 
+virkkeen/virkkeiden jälkeen, jotka kyseisestä lähteestä ovat. \citep[s. 14.]{Kauppinen01b} Jos lähde viittaa yhteen virkkeeseen, tulee lähde ennen virkkeen pistettä \citep[s. 36.]{Kauppinen01a}. Jos taas lähde viittaa useampaan virkkeeseen 
+(esimerkiksi koko kappaleeseen), tulee lähde viimeisen viitattavan virkkeen pisteen jälkeen \citep[s. 30.]{Kauppinen01b}.\par
+
+Pääsääntö on, että harjoitustyöt ovat lähes poikkeuksetta kirjallisuuspohjaisia, jolloin 
+lähteitä tulee lähes jokaisen kappaleen loppuun. Päättötöiden kohdalla tilanne on toinen; kun kyseisen työn kirjoittaja on tehnyt omaa tutkimusta ja saanut tutkimustuloksia, tulosten/analysoinnin/johtopäätösten perään  hänen ei tule  lähdettä \citep[s. 30.]{Kauppinen01b} Mikäli tekstiosuuden, kuvan tai taulukon yhteydessä ei ole 
+lähdettä, lukija olettaa että kyseinen osuus, kuva tai taulukko on kirjoittajan omaa tuotantoa (esim. omia johtopäätöksiä, analyysia, omien tutkimusten tuloksia tms.).\par
+
+Tässä ohjeessa on käytetty Harvardin järjestelmää. Lähdeviitteiden merkitsemisessä on 
+tässä malliselostuksessa noudatettu standardia SFS 5989:2012. Katso standardista, miten 
+viitteet muodostetaan ja miten lähdeviitteet laaditaan. \citeauthor{SFS12}.
+
+Aikaisempina vuosina on etenkin www-lähteiden merkitseminen ollut hankalaa, siksi tässä 
+malliselostuksessa on  muutama  verkkolähdeviittausesimerkki.  Jos kuitenkin  joudut 
+viittaamaan  erikoisempiin  www-lähteisiin,  kannattaa  viittausohje  vielä  tarkastaa 
+yliopistomme kirjaston www-sivuilta. \citep{Viittaaminen07}
+
+Muista kirjallisuutta tutkiessasi ja  etenkin www-lähteitä käyttäessäsi lähdekritiikki. 
+Esimerkiksi opiskelijakollegoiden tekemät harjoitustyöt tai seminaarit eivät ole luotettavia 
+lähteitä.  Toisekseen aina tulisi pyrkiä  viittaamaan alkuperäiseen lähteeseen ja 
+harjoitustyöthän ovat pääosin kirjallisuuspohjaisia. Suullisten lähteiden käyttö ei ole 
+suositeltavaa sillä väärinymmärryksen mahdollisuus on suuri. On kuitenkin tilanteita 
+jolloin niitä joudutaan käyttämään (esim. haastattelututkimuksissa tai kun tietoa ei ole 
+muuta kautta saatavilla). \cite{Pakkanen05}
+
+\textbf{Kannattaa tutustua Moodlessa olevaan ohjeeseen, joka koskee lähdeluettelon ja 
+tekstiviitteiden tekemistä.} Kyseisessä ohjeessa  on selostettu yleisimpien käytettyjen 
+teosten lähdeluettelomallit ja niin ikään tekstiviitteet. 
+\newpage
+\section{JOHTOPÄÄTÖKSE}
+
+Tässä kohdin esitetään työn johtopäätökset. Tähän malliselostuksen loppuun on nyt kerätty tiedot tämän ohjeen muista liitteenä olevista ohjeista. Liitteessä I on kandidaatintyön ja/tai diplomityön projektisuunnitelmaan tarvittavat tiedot. Liitteessä II on pohja työn ohjaajan ja työn teettäjän kanssa  laadittavaan palaverien  ja välinäyttöjen aikataulusuunnitelmaan. Liitteestä III löytyy teknisen raportin rakenteeseen ohjeet. 
+
+
+
+\newpage
+%jotta hyper linkki toimisi on lisättävä phanttomi ja pitää lisää manuaalsiesti lähteet oiso sisällysluetteloon 
+\phantomsection
+\begin{thebibliography}{99}
+\addcontentsline{toc}{section}{LÄHTEET}
+\bibitem[Andersson(1997)]{Andersson97} Andersson, P. 1997. Lastuttavuus. Teoksessa: Aaltonen, K., Andersson, P. \& Kauppinen, V. Koneistustekniikat. Porvoo: Werner Söderström Osakeyhtiö. s. 130–160.
+
+\bibitem[Hirsjärvi, Remes ja Sajavaara(2005)]{Hirsjarvi05}Hirsjärvi, S., Remes, P. \& Sajavaara, P. 2005. Tutki ja kirjoita. 10.painos. Jyväskylä: Gummerus. 436 s.
+
+\bibitem[Jantunen(2007)]{Jantunen07}Jantunen, T. 2007. Kirjoittamalla oppii. Tietotekniikkalehti. Nro 3, s. 41-50.
+
+\bibitem[Kauppinen \& Makkonen(2001a)]{Kauppinen01a}Kauppinen, S. \& Makkonen, K. 2001a. Bussit. 2. Painos. Helsinki: Otakustantamo. 144 s.
+
+\bibitem[Kauppinen \& Makkonen(2001b)]{Kauppinen01b}Bussit jatko-osa. 2. Painos. Helsinki: Otakustantamo. 122 s. 
+
+\bibitem[Kauppinen(1990)]{Kauppinen90}Kauppinen,  V.  1990.  Konepajatekniikan  termejä.  Tekninen  tiedotus  28/90. Metalliteollisuuden Keskusliitto. 44 s.
+
+\bibitem[Lappeenrannan teknillinen yliopisto(2014)]{Lut14}Lappeenrannan teknillinen yliopisto. 2014. Tiivistelmä. [Viitattu 26.2.2015]. Saatavissa:
+\url{https://uni.lut.fi/home?p_auth=3CTpEXjE&p_p_auth=pi0dTdi8&p_p_id=20&p_p_lifecycle=
+1&p_p_state=exclusive&p_p_mode=view&_20_struts_action=%2Fdocument_library%2Fget
+_file&_20_groupId=10304&_20_folderId=29420&_20_name=8624 }
+
+\bibitem[Leino, Luukko ja Laine(2000)]{Leino00}Leino, A., Luukko, V. \& Laine, K. 2000. Koneistuksen perusteet. Tampere: Gummerus. 100 s.
+
+\bibitem[Pakkanen(2005)]{Pakkanen05}Pakkanen, S. Ohjeita kirjoittamiseen. Kirjoittamisen opas [verkkolehti]. 2005, nro 8. [Viitattu 10.5.2005]. Saatavissa:\url{http://www.kirjoittamisenopas.fi/ohjeita kirjoittamiseen}
+
+\bibitem[Rantanen(2014)]{Rantanen14}Rantanen, H. 2014. Opinnäytetyöohjeet.  [Viitattu  12.2.2015].  14  s.  Saatavissa: \url{https://uni.lut.fi/fi/c/document_library/get_file?uuid=c58747ee-e3ac-45a5-8efb-
+475b69c6b1e3&groupId=10304}
+
+\bibitem[Rantanen(2010)]{Rantanen10}Rantanen, H. 2010. Final thesis instructions. 12 s. [Viitattu 12.2.2015]. Saatavissa: 
+\url{https://uni.lut.fi/en/c/document_library/get_file?uuid=6c6ee021-4b98-4a99-99fb-
+9dfc40965d09&groupId=50139}
+
+
+\bibitem[SFS 5989(2012)]{SFS12}SFS 5989. Lähde- ja tekstiviitteitä koskevat ohjeet. Helsinki: Suomen Standardisoimisliitto 
+SFS, 2012. 41 s. Vahvistettu 13.8.2012. 
+
+\bibitem[Varis(1997)]{Varis97}Varis, J. 1997. Luentomoniste, Tuotantotekniikan peruskurssi. Lappeenranta: Lappeenrannan teknillinen yliopisto. 30 s. 
+
+\bibitem[Viittaaminen sähköisiin dokumentteihin(2007)]{Viittaaminen07}Viittaaminen sähköisiin dokumentteihin. [Lappeenrannan teknillisen yliopiston kirjaston 
+www-sivuilla].  Viimeksi  päivitetty  02.05.2007.  [Viitattu  7.5.2007].  Saatavissa:
+\url{http://www.lut.fi/fi/kirjasto/ohjeet/viittaaminen_sahkoisiin_dokumentteihin.html}
+
+\end{thebibliography}
+\newpage
+%\appendix
+%\chapter{First Appendix test}
+
+% %\chapter*{chapter name}
+% \markboth{chapter name}{}
+% \MakeUppercase{PROJEKTISUUNNITELMA}
+% \begin{enumerate}[1.,noitemsep, nolistsep, topsep=-1em]
+% \item \MakeUppercase{tunnistetiedot}
+%  \begin{itemize}[ ]
+%  \item Tekijän, kohdeyrityksen, omaohjaajan ja tarkastajan yhteystiedot 
+%  \item Työn alustava nimi
+%  \end{itemize}
+% \item \MakeUppercase{tausta}
+% \begin{itemize}[ ]
+%  \item Miksi työ tehdään? 
+%  \item Mikä on työn lähtökohta?
+%  \end{itemize}
+% \item \MakeUppercase{PÄÄONGELMA}
+%  \begin{itemize}[ ]
+%   \item Työn pääongelma ja päätutkimuskysymys 
+%   \item Mihin kysymyksiin haetaan vastausta?
+%   \end{itemize}
+% \item \MakeUppercase{TAVOITTEET}
+%   \begin{itemize}[ ]
+%   \item Konkreettinen lopputulos?   
+%   \item Mitä on valmiin työn lopussa?
+%   \item Mitä hyötyä työn tekemisestä on kohdeorganisaatiolle?
+%   \end{itemize}
+% \item \MakeUppercase{RAJAUS}
+%   \begin{itemize}[ ]
+%   \item Työn keskeiset teoriat, joita sovelletaan. 
+%   \item Teorian rajaaminen.
+%   \item Empirian rajaaminen.
+%   \end{itemize}
+% \item \MakeUppercase{VÄLITAVOITTEET JA AIKATAULU}
+%   \begin{itemize}[ ]
+%   \item Mitä välitavoitteita tulee saavuttaa lopputulokseen pääsemiseksi? 
+%   \item Mitä toimenpiteitä välitavoitteet edellyttävät
+%   \item Väliraportointipäivien määrittäminen
+%   \item Milloin kypsyysnäyte kirjoitetaan?
+%   \item Aikataulun kuvaaminen aikajanoin
+%   \end{itemize}
+% \item \MakeUppercase{MENETELMÄT}
+%   \begin{itemize}[ ]
+%   \item Tutkimusmenetelmät
+%   \item Mitä menetelmiä käytät tiedon hankinnassa?
+%   \item Mitä menetelmiä käytät aineiston analysoinnissa ja tulkinnassa?
+%   \end{itemize}
+% \item \MakeUppercase{LÄHTEET}
+% \item \MakeUppercase{ALUSTAVA SISÄLLYSLUETTELO}
+% \end{enumerate}
+% \newpage
+% Aikataulurunko.\par
+% Opiskelija:\\
+% Työn nimi:\\
+% Työnteettäjä ja yhteystiedot:\\
+% Työnteettäjä ja yhteystiedot:
+% \vspace{1em}
+% \begin{table}[htb]
+% \begin{tabular}{|p{13cm}|l|}
+% 	\hline
+%   \textbf{Palaverit ja työn välipalautukset} & \textbf{Ajankohta}\\
+%     & \textbf{(pp.kk.vv)}\\ \hline
+%   ALOITUSPALAVERI  & \\
+%     & \\ \hline %\multicolumn{2}{c}
+%   Työn teettäjän katsaus I  & \\ \cline{2-2}
+%      &  \\  \hline 
+%   VÄLIPALAVERI & \\ 
+%   \multirow{4}{*}{Defenders} & \\
+%     &  \\ 
+%     &  \\
+%     &  \\
+%     &  \\
+%   \hline
+% \end{tabular}
+% \end{table}
+% \newpage
+% \chapter{An appendix}
+% kala
+% \newpage
+% \section{First Appendix}
+% kala 
+% \newpage
+% \section{First Appendix}
+% kala
+% \newpage
+% kala
+% \newpage
+% \section{First Appendix}
+% kala
+% %\end{appendices}
+\end{document}
