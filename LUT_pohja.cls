@@ -19,6 +19,7 @@
 \usepackage{newtxtext,newtxmath} %fontti tyyli
 \usepackage[none]{hyphenat}
 \usepackage{amsmath,bm} %matemaattiset symbolit
+
 %kuvakirjastot
 \RequirePackage[headheight=15pt]{geometry}
 \usepackage{graphicx}
@@ -33,11 +34,14 @@
 
 %taulukko
 \usepackage{multirow}
+%Isojen taulukkojen automaattinen katkaisu
+\usepackage{longtable}
+\setlength{\LTpre}{2.5em}
 
 %Luettelot
 \usepackage[shortlabels]{enumitem}
 \setlist[itemize]{noitemsep, nolistsep,topsep=-1em}
-%\setlist{nosep,after=\vspace{\baselineskip}}
+
 %linkit
 \usepackage{url}
 \urlstyle{same}
@@ -52,8 +56,6 @@
 \setlength{\belowcaptionskip}{-1em}
  \linespread{1.5}
  
-%Taulukkojen automaattinen katkaisu
-\usepackage{longtable}
 
 
 %sisällysluettelon linkitys
@@ -80,6 +82,7 @@
 \titleformat*{\section}{\normalsize\bfseries}
 \titleformat*{\subsection}{\normalsize}
 \titleformat*{\subsubsection}{\normalsize}
+
 %otsikoiden välit ennen ja jälkeen. niistä miinustetaan riviväli, mikä tulee automaattisesti mukaan
 %\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{24pt plus 2pt minus 2pt}
 \newlength{\aftersection}
@@ -119,6 +122,12 @@
 \usepackage{totcount}
 \regtotcounter{figure}
 \regtotcounter{table}
+\newtotcounter{pageLast}
+\newtotcounter{totalsections}
+
+%pisteet pois sisällys luettelosta liitteille
+\renewcommand{\cftsecdotsep}{\cftdotsep}
+
 
 
 %tab komento
@@ -126,10 +135,10 @@
 \newcommand{\tab}[1]{\hspace{.2\textwidth}\rlap{#1}}
 
 %liitetideostojen hallinta
-\usepackage[titletoc,toc]{appendix}
+\usepackage[titletoc,title]{appendix}
 \usepackage{chngcntr}
-%\renewcommand\appendixtocname{LIITTEET}
-%\renewcommand{\appendixname}{LIITE}
+
+\renewcommand{\appendixname}{LIITE}
 
 
 \newcommand*{\schoolfin}{}\newcommand*{\schoolen}{}
@@ -184,7 +193,11 @@
 \newcommand*{\ThesisDate}[2]{
  \renewcommand*{\DateYear}{#1}%
  \renewcommand*{\DateDaMo}{#2}%
-}
+ 
+}%Ottaa sivujen, kuvien ja taulukkojen määrän talteen ennen liitteitä
+\newcounter{Tempfigures}
+\newcounter{Temptable}
+\newcounter{Temppage}
 
 
 %Luo etusivun
@@ -228,7 +241,7 @@
      {\bfseries\ThesisTitlefin}\par
      \Doctypefin\par
      \DateYear\par
-     \pageref{LastPage} sivua, \total{figure} kuvaa, \total{table} taulukkoa ja X liitettä\par
+     \total{pageLast} sivua, \total{figure} kuvaa, \total{table} taulukkoa ja \total{totalsections} liitettä\par
     Tarkastajat: \qquad\Tarkastajafirst.\\
     \hphantom{Tarkastajat: \qquad}\Tarkastajasecond.\par
     Hakusanat: \Keywordsfin\par
@@ -247,7 +260,7 @@
      {\bfseries\ThesisTitleen}\par
      \Doctypeen\par
      \DateYear\par
-     \pageref{LastPage} pages, \total{figure} figures, \total{table} tables ja X  appendices\par
+     \total{pageLast} pages, \total{figure} figures, \total{table} tables ja \total{totalsections}  appendices\par
     Examiners: \qquad\Examinerfirst.\\
     \hphantom{Tarkastajat: \qquad}\Examinersecond.\par
     Keywords: \Keywordsen\par
@@ -265,6 +278,7 @@
 }
 %Sivunumerointi
 \usepackage{fancyhdr}
+
 \newcommand\ps@Mainstyle{%
    % \usepackage{fancyhdr} % Custom headers and footers
     \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
@@ -294,47 +308,48 @@
   \label{fig:#4}
 \end{figure}
 }
+%tallettaa kuvien, taulukkojen ja sivujen määrän ennen liitteitä. Lisää tämä osio dipan loppuun, ennen liitteitä.
+\newcommand\TempTalteen{
+\setcounter{Tempfigures}{\value{figure}}
+\setcounter{Temptable}{\value{table}}
+\setcounter{pageLast}{\number\value{page}}
+ }
+ %Asettaa oikeat arvot 
+ \newcommand\Talteen{
+\setcounter{figure}{\value{Tempfigures}}
+\setcounter{table}{\value{Temptable}}
+\setcounter{totalsections}{\value{section}}
+
+ }
+
+
 
 %liitetiedosto ympäristö
-% \newcommand\ps@Appendi{%
-%         \pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
-%     \fancyhead[L]{}% Empty left header
-%     \fancyhead[C]{} % Page numbering for center header 
-%     %\fancyhead[R]{Liite \chaptermark \ifnum\value{page}>0\relax, \thepage\else\fi}
-%      \fancyhead[R]{Liite \leftmark \thepage}
-%     \fancyfoot[L]{}% Empty left footer
-%     \fancyfoot[C]{}% Empty center footer
-%     \fancyfoot[R]{}% Empty left footer
-%     \renewcommand{\headrulewidth}{0pt}
-% }
-% \newcommand\ps@appendix{%
-% 	\pagestyle{fancyplain} 
-%     \fancyhead[L]{}% Empty left header
-%     \fancyhead[C]{} % Page numbering for center header 
-%     %\fancyhead[R]{Liite \chaptermark \ifnum\value{page}>0\relax, \thepage\else\fi}
-%      \fancyhead[R]{Liite \leftmark \thepage}
-%     \fancyfoot[L]{}% Empty left footer
-%     \fancyfoot[C]{}% Empty center footer
-%     \fancyfoot[R]{}% Empty left footer
-% % }
-% \renewcommand\appendix{%
-%   \clearpage%
-%   \pagestyle{appendix}%
-%    \renewcommand\thesection{\@arabic\c@section}%
-%    \renewcommand\thefigure{A\thesection.\@arabic\c@figure}%
-%    \renewcommand\thetable{A\thesection.\@arabic\c@table}%
-%    \setcounter{section}{0}%
-%    \setcounter{subsection}{0}%
-%    \addtocontents{toc}{\protect\contentsline{section}{LIITTEET}{}{}}%
-%     \addtocontents{toc}{\protect\renewcommand{\protect\cftsecindent}{50pt}}
-%   \renewcommand\section{%
-%     \clearpage%
-%     \setcounter{figure}{0}%
-%     \setcounter{table}{0}%
-%     %\secdef\Appendix\sAppendix%
-%   }%
-% }
-% ended with \sectionend.
+\newcommand\ps@appendix{%
+	\pagestyle{fancyplain} 
+    \fancyhead[L]{}% Empty left header
+    \fancyhead[C]{} % Page numbering for center heade
+    \fancyhead[R]{Liite \thesection, \thepage}
+     %\fancyhead[R]{Liite \thepage}
+    \fancyfoot[L]{}% Empty left footer
+    \fancyfoot[C]{}% Empty center footer
+    \fancyfoot[R]{}% Empty left footer
+}
+ \renewcommand\appendix{%
+   \clearpage%
+   \pagestyle{appendix}%
+   %\renewcommand{\cftdot}{}
+	\renewcommand{\thesection}{\Roman{section}}
+	\counterwithin{figure}{section}% Reset the figure counter
+	\counterwithin{table}{section} % Reset the table counter
+	\counterwithin*{page}{section} % Reset the page counter with each appendix section 
+    \addtocontents{toc}{\cftpagenumbersoff{section}}
+     \addtocontents{toc}{\protect\contentsline{section}{LIITTEET}{}{}}%
+	\addtocontents{toc}{\protect\renewcommand{\protect\cftsecindent}{60pt}}
+    \addtocontents{toc}{\protect\renewcommand\cftsecfont{\normalfont}}
+
+ }
+
 
 
 

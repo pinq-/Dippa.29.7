@@ -16,15 +16,15 @@
 \author{Teemu Teekkari}
 
 \begin{document}
-\sloppy
-\makecover
+\sloppy %Tasainen sanojen väli
+\makecover %Luo kannen
 % * <karli.kund@iki.fi> 2016-03-17T07:56:19.524Z:
 %
 % ^.
 \newpage
 \newgeometry{tmargin=30mm,bmargin=20mm,lmargin=30mm,rmargin=20mm}
 
-\begin{tiivis}%
+\begin{tiivis}% #Jos sivu numerot eivät täsmää oman tiedoston kanssa niin tarksita \Temptalteen diplomityön lopussa. Komento tallentaa sivujen, kuvien ja taulukkojen määrän ennen liitteitä. 
 Rantasen \citeyearpar[s. 5]{Rantanen14} mukaan ”Tiivistelmä on suppea (yksi A4), objektiivinen, itsenäinen 
 esitys  opinnäytteestä.  Sen  tulee  olla  ymmärrettävissä  sellaisenaan  ilman 
 alkuperäisdokumenttia. Siinä selvitetään työn Sisältö: työn tavoite, tutkimusmetodologiat 
@@ -41,11 +41,10 @@ yhdelle sivulle. Tiivistelmä on itsenäinen esitys kandidaatintyöstä, joten t
 olla ymmärrettävissä sellaisenaan. Työtä kuvataan tiivistelmässä kuin ulkopuolinen tekijä 
 olisi tiivistelmän laatinut, omat  mielipiteet eivät saa tiivistelmässä näkyä. Tiivistelmään 
 tulee sisällyttää työn keskeisimmät tulokset. \citep{Lut14}
-
 \end{tiivis}
 
 
-\begin{Abstract}
+\begin{Abstract}%
 According to \citet[s. 5]{Rantanen10}: ”The abstract is a concise (one A4 sheet), objective, 
 independent summary of the Master’s thesis. It should be intelligible as such, without the 
 original document. It explains the contents of the thesis: the objective, methodologies, 
@@ -57,20 +56,17 @@ document, and therefore all confidential information must be excluded from it.\p
 Also it should be notice that the line spacing in abstract is 1. The abstract is also an 
 independent summary of the thesis and it should fit in one A4-page. Author’s own 
 opinions is not shown in the abstract.\citep{Lut14}
-
 \end{Abstract}
 
 \begin{preface}
-
 Tähän tulee alkusanat, mikäli ne haluaa työhön liittää. Yleensä alkusanoissa kiitetään työn 
 rahoittajaa  ja  työn tarkastajia.  Monesti kiitossanoissa  näkee  myös  kiitoksen 
 opiskelukavereille ja perheelle. Sana on vapaa eli kirjoita sitä miltä tuntuu! Älä kuitenkaan 
 loukkauksia tai solvauksia. 
-
 \end{preface}
 
-\renewcommand\refname{LÄHTEET}
-\renewcommand\contentsname{ }
+
+\renewcommand\contentsname{ } %Sisällysluettelo on kirjoitettu jo ylös. Tämä poistaa automaattisen sisällysluettelon
 
 \pagestyle{Mainstyle}
 \newpage
@@ -82,6 +78,8 @@ loukkauksia tai solvauksia.
 \MakeUppercase{Symboliluettelo}\par
 \end{luettelo}
 \tableofcontents
+
+
 \newpage
 \section*{\MakeUppercase{Symboli- ja lyhenneluettelo}}
 SYMBOLIT\par
@@ -105,6 +103,7 @@ SI-yksiköitä, poikkeukset näistä olisi hyvä mainita. Esim. syötön kohdall
 on yleisesti käytössä (ei m/r). Lastuamisnopeuden kohdalla yksikkö m/min on yleisesti 
 käytössä (ei m/s).
 
+
 \newpage
 \section{JOHDANTO}
 Tämän ohje on ulkoasumalli ja tiivistetty ohje selostuksien ja opinnäytteiden laatimiseen. 
@@ -117,6 +116,8 @@ Kieliasun laatuun panostamisen merkitys lienee kaikille itsestään selvää. Te
 Miksi työn ulkoasuun ja muotoseikkoihin tulee kiinnittää huomiota? Työn ulkoasusta tulisi saada selkeä, jolloin työ olisi myös helposti luettavissa ja ennen kaikkea lukeminen olisi miellyttävää.  Työstä löytää helposti etsimänsä  ja työ  etenee  johdonmukaisesti. Lähdeviitteiden  oikein  merkitseminen  on  erittäin  tärkeää,  ei  ainoastaan tekijänoikeudellisista syistä, vaan myös koska niiden avulla työn lukija havaitsee, mikä asia on otettu mistäkin lähteestä. Lukija voi tällöin myös arvioida esimerkiksi tiedon luotettavuutta ja ajanmukaisuutta lähteiden laadun ja julkaisuvuoden perusteella. Lukijalla on lähdemerkintöjen avulla myös mahdollisuus löytää alkuperäinen lähde esimerkiksi lisätietojen etsimistä varten.\par
 
 Jokaisen opiskelijan tulisi itsenäisesti perehtyä viittaustekniikoihin ja siihen miten teknistä tekstiä kirjoitetaan \citep{Pakkanen05}. Vastuu omasta oppimisesta on jokaisella opiskelijalla itsellään. Apua ja ohjeistusta saa ja sitä tulee pyytää, kun sitä tarvitsee. Rohkaisuna vielä kirjoittajille: Kukaan ei ole seppä syntyessään ja virheitä syntyy, mutta kun kerran ulkoasuasiat opettelee, on kirjoittaminen tulevaisuudessa paljon helpompaa. \citep{Viittaaminen07}
+
+
 \newpage
 \section{TEKNISEN TIETEELLISEN TEKSTIN ULKOASU JA MUOTOSEIKAT}
 
@@ -144,6 +145,7 @@ ulkoasuvaatimuksia ja muotoseikkoja.
 Opinnäytetyöohjeiden mukaan rivinväli on 1,5.  Fontin käyttöön on kaksi eri 
 mahdollisuutta: Times New Roman tai Arial (tämä ohje on kirjoitettu Times New 
 Romanilla). Fonttikokona koko tekstissä käytetään: Times 12pt tai Arial 11pt.  Jokaisen tekstikappaleen jälkeen tulee yksi (1) tyhjä rivinväli. Yksi (1) tyhjä rivinväli tulee myös kuvien ja taulukoiden jälkeen.
+
 \newpage
 Marginaalit tulee asettaa seuraavasti 
 \begin{itemize}
@@ -172,6 +174,7 @@ Luetelmat voidaan esittää muutamaan eri tapaan, joista yleisimpiä on käytett
 selostuksessa \citep[s.23]{Leino00}. (Edellä esimerkki lähdeviitteen 
 merkitsemisestä kun lähde viittaa vain yhteen lauseeseen). Seuraavassa on esitetty 
 muutama luetteloesimerkki. Jos lause jatkuu luettelon muodossa, ei ennen luetteloa yleensä ole kaksoispistettä. Esimerkiksi toisessa esimerkkiluettelossa alla lause jatkuu olla-verbin jälkeen, jolloin ei käytetä kaksoispistettä luettelon johdantolauseen jälkeen. Kolmannessa esimerkissä luettelo sisältää kokonaisia lauseita, tärkeää on huomioida tässä että lähdemerkintä tulee oikein. Teknisen tekstin laadinnassa tärkeitä seikkoja on lueteltu seuraavassa \citep[s.20]{Leino00}:
+
 \begin{itemize}[-]
 \item selkeä ulkoasu 
 \item johdonmukainen kappalejako
@@ -206,6 +209,9 @@ Luetteloissa voidaan käyttää tarpeen mukaan numeroita, ranskalaisia viivoja t
 luettelomerkkejä.  Numeroita  tai kirjaimia  luettelossa käytetään esimerkiksi,  kun 
 myöhemmin on tarve viitata luettelon johonkin kohtaan. Numeron tai kirjaimen jälkeen 
 tulee kaarisulku (kuten yllä). Luettelomerkkien tulisi mielellään olla samanlaisia läpi työn. (\citeauthor{Leino00}, \citeyear{Leino00}, s. 23; \citeauthor{Kauppinen01a}, \citeyear{Kauppinen01a}, s. 14.)
+
+
+\vspace*{\fill}%siiretään kappale mahdollisimman alas sivua 
 \subsection{Taulukoiden ja kuvien esittäminen}
 Taulukoilla ja kuvilla voidaan selventää tekstin sisältöä. Taulukkoa voi käyttää myös 
 vertailujen tekemiseen. Taulukkoteksti kursivoidaan ja se on aina taulukon yläpuolella alkaen vasemmasta reunasta. Taulukkoa ei keskitetä. Taulukoihin ja kuviin viitataan tekstissä, ennen niiden esiintymistä. \citep[s.98.]{Leino00} Suurten kuvien ja taulukoiden sijoittamista liitteisiin on aina harkittava. Taulukossa 1 on esitelty esimerkkinä tärkeimpiä lastuamisarvoja ja aikaansaatavia pinnankarheuksia sorvauksessa.
@@ -220,10 +226,11 @@ vertailujen tekemiseen. Taulukkoteksti kursivoidaan ja se on aina taulukon yläp
   200 & 1,618 & 42 & 42\\ \hline
 \end{tabular}
 \end{table}
-\newpage
+%Tämä talukko on katkaistu manuaalisesti, jotta saadaan halutun lainen. Jos mahdollista, käytä longtable versiota. Esimerkki liitteessä II
 
+\newpage
 \addtocounter{table}{-1}%Tämä vain koska sama taulukko jatkuu. Jos on pitkä taulkko
-						%nii käyttäkää longtable kirjastoa.
+%nii käyttäkää longtable kirjastoa.
 \begin{table}[htb]
 %% Taulukon teksti
 \caption{Kaksi lastuamisarvoyhdistelmää 25CrMo4-nuorrutusteräksen sorvaukseen \citep[s. 34]{Varis97}.}
@@ -275,7 +282,7 @@ Liite I, 2 jne.
 \end{enumerate}
 \subsubsection{Testi kolmas otsikko}
 \paragraph{Neljäs otsikko}%paragraphilla saadaan neljäs alaotsikko
-testi
+
 
 \newpage
 \section{LÄHTEIDEN MERKITSEMINEN}
@@ -320,11 +327,14 @@ Tässä kohdin esitetään työn johtopäätökset. Tähän malliselostuksen lop
 
 
 
+
+
 \newpage
+\renewcommand\refname{LÄHTEET} %Lähteet otsikko
 %jotta hyper linkki toimisi on lisättävä phanttomi ja pitää lisää manuaalsiesti lähteet oiso sisällysluetteloon 
 \phantomsection
 \begin{thebibliography}{99}
-\addcontentsline{toc}{section}{LÄHTEET}
+\addcontentsline{toc}{section}{LÄHTEET} %Lisää sisällysluetteloon lähteet osion
 \bibitem[Andersson(1997)]{Andersson97} Andersson, P. 1997. Lastuttavuus. Teoksessa: Aaltonen, K., Andersson, P. \& Kauppinen, V. Koneistustekniikat. Porvoo: Werner Söderström Osakeyhtiö. s. 130–160.
 
 \bibitem[Hirsjärvi, Remes ja Sajavaara(2005)]{Hirsjarvi05}Hirsjärvi, S., Remes, P. \& Sajavaara, P. 2005. Tutki ja kirjoita. 10.painos. Jyväskylä: Gummerus. 436 s.
@@ -362,98 +372,247 @@ SFS, 2012. 41 s. Vahvistettu 13.8.2012.
 \bibitem[Viittaaminen sähköisiin dokumentteihin(2007)]{Viittaaminen07}Viittaaminen sähköisiin dokumentteihin. [Lappeenrannan teknillisen yliopiston kirjaston 
 www-sivuilla].  Viimeksi  päivitetty  02.05.2007.  [Viitattu  7.5.2007].  Saatavissa:
 \url{http://www.lut.fi/fi/kirjasto/ohjeet/viittaaminen_sahkoisiin_dokumentteihin.html}
-
 \end{thebibliography}
-\newpage
-%\appendix
-%\chapter{First Appendix test}
 
-% %\chapter*{chapter name}
-% \markboth{chapter name}{}
-% \MakeUppercase{PROJEKTISUUNNITELMA}
-% \begin{enumerate}[1.,noitemsep, nolistsep, topsep=-1em]
-% \item \MakeUppercase{tunnistetiedot}
-%  \begin{itemize}[ ]
-%  \item Tekijän, kohdeyrityksen, omaohjaajan ja tarkastajan yhteystiedot 
-%  \item Työn alustava nimi
-%  \end{itemize}
-% \item \MakeUppercase{tausta}
-% \begin{itemize}[ ]
-%  \item Miksi työ tehdään? 
-%  \item Mikä on työn lähtökohta?
-%  \end{itemize}
-% \item \MakeUppercase{PÄÄONGELMA}
-%  \begin{itemize}[ ]
-%   \item Työn pääongelma ja päätutkimuskysymys 
-%   \item Mihin kysymyksiin haetaan vastausta?
-%   \end{itemize}
-% \item \MakeUppercase{TAVOITTEET}
-%   \begin{itemize}[ ]
-%   \item Konkreettinen lopputulos?   
-%   \item Mitä on valmiin työn lopussa?
-%   \item Mitä hyötyä työn tekemisestä on kohdeorganisaatiolle?
-%   \end{itemize}
-% \item \MakeUppercase{RAJAUS}
-%   \begin{itemize}[ ]
-%   \item Työn keskeiset teoriat, joita sovelletaan. 
-%   \item Teorian rajaaminen.
-%   \item Empirian rajaaminen.
-%   \end{itemize}
-% \item \MakeUppercase{VÄLITAVOITTEET JA AIKATAULU}
-%   \begin{itemize}[ ]
-%   \item Mitä välitavoitteita tulee saavuttaa lopputulokseen pääsemiseksi? 
-%   \item Mitä toimenpiteitä välitavoitteet edellyttävät
-%   \item Väliraportointipäivien määrittäminen
-%   \item Milloin kypsyysnäyte kirjoitetaan?
-%   \item Aikataulun kuvaaminen aikajanoin
-%   \end{itemize}
-% \item \MakeUppercase{MENETELMÄT}
-%   \begin{itemize}[ ]
-%   \item Tutkimusmenetelmät
-%   \item Mitä menetelmiä käytät tiedon hankinnassa?
-%   \item Mitä menetelmiä käytät aineiston analysoinnissa ja tulkinnassa?
-%   \end{itemize}
-% \item \MakeUppercase{LÄHTEET}
-% \item \MakeUppercase{ALUSTAVA SISÄLLYSLUETTELO}
-% \end{enumerate}
-% \newpage
-% Aikataulurunko.\par
-% Opiskelija:\\
-% Työn nimi:\\
-% Työnteettäjä ja yhteystiedot:\\
-% Työnteettäjä ja yhteystiedot:
-% \vspace{1em}
-% \begin{table}[htb]
-% \begin{tabular}{|p{13cm}|l|}
-% 	\hline
-%   \textbf{Palaverit ja työn välipalautukset} & \textbf{Ajankohta}\\
-%     & \textbf{(pp.kk.vv)}\\ \hline
-%   ALOITUSPALAVERI  & \\
-%     & \\ \hline %\multicolumn{2}{c}
-%   Työn teettäjän katsaus I  & \\ \cline{2-2}
-%      &  \\  \hline 
-%   VÄLIPALAVERI & \\ 
-%   \multirow{4}{*}{Defenders} & \\
-%     &  \\ 
-%     &  \\
-%     &  \\
-%     &  \\
-%   \hline
-% \end{tabular}
-% \end{table}
-% \newpage
-% \chapter{An appendix}
-% kala
-% \newpage
-% \section{First Appendix}
-% kala 
-% \newpage
-% \section{First Appendix}
-% kala
-% \newpage
-% kala
-% \newpage
-% \section{First Appendix}
-% kala
-% %\end{appendices}
+
+%tallettaa kuvien, taulukkojen ja sivujen määrän ennen liitetiedostoja. Lisää tämä osio dipan loppuun, ennen liitteitä.
+\TempTalteen
+
+\newpage
+\begin{appendices}
+
+
+\appendix %liitetiedostojen tyyli
+
+\section{Projektisuunnitelma}
+\addtocounter{page}{1}%jos haluat sivu numeroinnin alkavan yhdellä, lisää tämä jokaisen liitteen alkuun.
+\MakeUppercase{PROJEKTISUUNNITELMA}
+\value{chapter}
+\begin{enumerate}[1.,noitemsep, nolistsep, topsep=-1em]
+\item \MakeUppercase{tunnistetiedot}
+ \begin{itemize}[ ]
+ \item Tekijän, kohdeyrityksen, omaohjaajan ja tarkastajan yhteystiedot 
+ \item Työn alustava nimi
+ \end{itemize}
+\item \MakeUppercase{tausta}
+\begin{itemize}[ ]
+ \item Miksi työ tehdään? 
+ \item Mikä on työn lähtökohta?
+ \end{itemize}
+\item \MakeUppercase{PÄÄONGELMA}
+ \begin{itemize}[ ]
+  \item Työn pääongelma ja päätutkimuskysymys 
+  \item Mihin kysymyksiin haetaan vastausta?
+  \end{itemize}
+\item \MakeUppercase{TAVOITTEET}
+  \begin{itemize}[ ]
+  \item Konkreettinen lopputulos?   
+  \item Mitä on valmiin työn lopussa?
+  \item Mitä hyötyä työn tekemisestä on kohdeorganisaatiolle?
+  \end{itemize}
+\item \MakeUppercase{RAJAUS}
+  \begin{itemize}[ ]
+  \item Työn keskeiset teoriat, joita sovelletaan. 
+  \item Teorian rajaaminen.
+  \item Empirian rajaaminen.
+  \end{itemize}
+\item \MakeUppercase{VÄLITAVOITTEET JA AIKATAULU}
+  \begin{itemize}[ ]
+  \item Mitä välitavoitteita tulee saavuttaa lopputulokseen pääsemiseksi? 
+  \item Mitä toimenpiteitä välitavoitteet edellyttävät
+  \item Väliraportointipäivien määrittäminen
+  \item Milloin kypsyysnäyte kirjoitetaan?
+  \item Aikataulun kuvaaminen aikajanoin
+  \end{itemize}
+\item \MakeUppercase{MENETELMÄT}
+  \begin{itemize}[ ]
+  \item Tutkimusmenetelmät
+  \item Mitä menetelmiä käytät tiedon hankinnassa?
+  \item Mitä menetelmiä käytät aineiston analysoinnissa ja tulkinnassa?
+  \end{itemize}
+\item \MakeUppercase{LÄHTEET}
+\item \MakeUppercase{ALUSTAVA SISÄLLYSLUETTELO}
+\end{enumerate}
+\newpage
+Aikataulurunko.\par 
+Opiskelija:\\
+Työn nimi:\\
+Työnteettäjä ja yhteystiedot:\\
+Työnteettäjä ja yhteystiedot:
+\vspace{1em}
+\begin{table}[htb]
+\begin{tabular}{|p{13cm}|l|}
+	\hline
+  \textbf{Palaverit ja työn välipalautukset} & \textbf{Ajankohta}\\
+    & \textbf{(pp.kk.vv)}\\ \hline
+  ALOITUSPALAVERI  & \\
+    & \\ \hline %\multicolumn{2}{c}
+  Työn teettäjän katsaus I  & \\ \cline{2-2}
+     &  \\  \hline 
+  VÄLIPALAVERI & \\ 
+  \multirow{4}{*}{Defenders} & \\
+    &  \\ 
+    &  \\
+    &  \\
+    &  \\
+  \hline
+\end{tabular}
+\end{table}
+
+
+\newpage
+\section{Pitkä taulukko esimerkki}
+\addtocounter{page}{1}
+Tässä on esimerkki pitkän taulukon automaattisesta katkaisusta
+
+\begin{longtable}[l]{|l|l|l|}
+\caption{Pitkän taulukon esimerkki} \label{tab:pitka} \\
+
+\hline \multicolumn{1}{|c|}{\textbf{Ensimmäinen sarake}} & \multicolumn{1}{c|}{\textbf{Toinen sarake}} & \multicolumn{1}{c|}{\textbf{Kolmas sarake}} \\ \hline 
+\endfirsthead
+
+\multicolumn{3}{c}%
+{{\bfseries \tablename\ \thetable{} -- jatkuu edelliseltä sivulta}} \\
+\hline \multicolumn{1}{|c|}{\textbf{Ensimmäinen sarake}} & \multicolumn{1}{c|}{\textbf{Toinen sarake}} & \multicolumn{1}{c|}{\textbf{Kolmas sarake}} \\ \hline 
+\endhead
+
+\hline \multicolumn{3}{|c|}{{Jatkuu seuraavalle sivulle}} \\ \hline
+\endfoot
+
+\hline
+\endlastfoot
+
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+Yksi & abcdef ghjijklmn & 123.456778 \\
+\end{longtable}
+
+
+
+
+
+\newpage
+\section{}
+\begin{table}[htb]
+%% Taulukon teksti
+\caption{Kaksi lastuamisarvoyhdistelmää 25CrMo4-nuorrutusteräksen sorvaukseen \citep[s. 34]{Varis97}.}
+\begin{tabular}{|l|l|l|l|}
+	\hline
+  Lastuamisnopeus, $v$ & Syöttö, $f$  & Lastuamissyvyys, $a$ & Pinnankarheus, $R_{a}$\\
+  $[$m/min$]$ & $[$m/r$]$ & $[$mm$]$ & $[\mu$m$]$\\ \hline
+  200 & 1,618 & 42 & 42\\ \hline
+\end{tabular}
+\end{table}
+\kuva{0.4}{opiskelija}{Opiskelija tekemässä harjoitustyötä \citep[s. 90]{Leino00}.}{kala2}
+kala 
+
+
+\newpage
+\section{}
+
+\begin{table}[htb]
+%% Taulukon teksti
+\caption{Kaksi lastuamisarvoyhdistelmää 25CrMo4-nuorrutusteräksen sorvaukseen \citep[s. 34]{Varis97}.}
+\begin{tabular}{|l|l|l|l|}
+	\hline
+  Lastuamisnopeus, $v$ & Syöttö, $f$  & Lastuamissyvyys, $a$ & Pinnankarheus, $R_{a}$\\
+  $[$m/min$]$ & $[$m/r$]$ & $[$mm$]$ & $[\mu$m$]$\\ \hline
+  200 & 1,618 & 42 & 42\\ \hline
+\end{tabular}
+\end{table}
+\kuva{0.4}{opiskelija}{Opiskelija tekemässä harjoitustyötä \citep[s. 90]{Leino00}.}{kala3}
+
+
+
+\newpage
+\section{}
+\kuva{0.4}{opiskelija}{Opiskelija tekemässä harjoitustyötä \citep[s. 90]{Leino00}.}{kala4}
+
+
+\newpage
+\section{}
+Kalakeitto
+
+%Aseta tämä osio ennen documentin loppua
+\Talteen
+\newpage %Tämä pitää olla jotta viimeisen liitten numerointi menee oikein. Älä kysy.
+\end{appendices}
+
 \end{document}
